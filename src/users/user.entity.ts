@@ -8,11 +8,8 @@ import {
   CreatedAt,
   UpdatedAt,
   DeletedAt,
-  HasMany,
 } from 'sequelize-typescript';
 import { Gender } from './../shared/enum/gender.enum';
-import { Post } from './../posts/post.entity';
-
 @Table({
   tableName: 'user',
 })
