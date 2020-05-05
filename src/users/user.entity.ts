@@ -56,6 +56,6 @@ export class User extends Model<User> {
   @Column({ field: 'deleted_at' })
   deletedAt: Date;
 
-  @HasMany(() => Post)
-  posts: Post[];
+//   @HasMany(() => Post)
+//   posts: Post[];
 }

@@ -49,6 +49,6 @@ export class Post extends Model<Post> {
   @Column({ field: 'deleted_at' })
   deletedAt: Date;
 
-  @BelongsTo(() => User)
-  user: User;
+//   @BelongsTo(() => User)
+//   user: User;
 }
