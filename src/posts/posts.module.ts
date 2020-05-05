@@ -4,10 +4,10 @@ import { PostsController } from './posts.controller';
 import { PostsService } from './posts.service';
 import { postsProviders } from './posts.provider';
 
-@Module( {
-  imports: [ DatabaseModule ],
-  controllers: [ PostsController ],
-  providers: [ PostsService, ...postsProviders ],
+@Module({
+  imports: [DatabaseModule],
+  controllers: [PostsController],
+  providers: [PostsService, ...postsProviders],
   exports: [],
-} )
-export class PostsModule { }
+})
+export class PostsModule {}

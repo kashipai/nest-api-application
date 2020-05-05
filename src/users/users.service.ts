@@ -18,7 +18,7 @@ export class UsersService {
     private readonly usersRepository: typeof User,
     private readonly configService: ConfigService,
   ) {
-      this.jwtPrivateKey = this.configService.jwtConfig.privateKey;
+    this.jwtPrivateKey = this.configService.jwtConfig.privateKey;
   }
 
   async findAll() {
