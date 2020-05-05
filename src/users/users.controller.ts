@@ -1,4 +1,3 @@
-import { UserLoginRequestDto } from './dto/user-login-request.dto';
 import {
   Controller,
   Get,
@@ -10,13 +9,16 @@ import {
   UseGuards,
   Put,
 } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
+import {
+  CreateUserDto,
+  UserDto,
+  UpdateUserDto,
+  UserLoginResponseDto,
+  UserLoginRequestDto,
+} from './dto';
 import { UsersService } from './users.service';
-import { UserDto } from './dto/user.dto';
 import { ApiTags, ApiOkResponse, ApiBearerAuth } from '@nestjs/swagger';
-import { UserLoginResponseDto } from './dto/user-login-response.dto';
 import { AuthGuard } from '@nestjs/passport';
-import { UpdateUserDto } from './dto/update-user.dto';
 
 @Controller('users')
 @ApiTags('users')

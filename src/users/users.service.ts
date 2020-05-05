@@ -1,14 +1,16 @@
 import { Injectable, Inject, HttpException, HttpStatus } from '@nestjs/common';
 import { User } from './user.entity';
-import { UserDto } from './dto/user.dto';
-import { CreateUserDto } from './dto/create-user.dto';
 import { genSalt, hash, compare } from 'bcrypt';
 import { JwtPayload } from './auth/jwt-payload.model';
 import { sign } from 'jsonwebtoken';
 import { ConfigService } from './../shared/config/config.service';
-import { UserLoginResponseDto } from './dto/user-login-response.dto';
-import { UserLoginRequestDto } from './dto/user-login-request.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
+import {
+  UserLoginResponseDto,
+  CreateUserDto,
+  UserDto,
+  UpdateUserDto,
+  UserLoginRequestDto,
+} from './dto';
 
 @Injectable()
 export class UsersService {

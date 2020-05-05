@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { UsersModule } from './users/users.module';
-import { SharedModule } from './shared/config.module';
-import { PostsModule } from './posts/posts.module';
+import { UsersModule } from './users';
+import { SharedModule } from './shared';
+import { PostsModule } from './posts';
 
 @Module({
   imports: [UsersModule, PostsModule, SharedModule],
