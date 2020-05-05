@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
-import { User } from './../users/user.entity';
-import { Post } from './../posts/post.entity';
-import { ConfigService } from './../shared/config/config.service';
+import { User } from './../users';
+import { Post } from './../posts';
+import { ConfigService } from './../shared';
 
 export const databaseProviders = [
   {

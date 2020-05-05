@@ -17,12 +17,10 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger';
-import { CreatePostDto } from './dto/create-post.dto';
+import { CreatePostDto, PostDto, UpdatePostDto } from './dto';
 import { PostsService } from './posts.service';
 import { AuthGuard } from '@nestjs/passport';
 import { Post as PostEntity } from './post.entity';
-import { PostDto } from './dto/post.dto';
-import { UpdatePostDto } from './dto/update-post.dto';
 
 @Controller('posts')
 @ApiTags('posts')

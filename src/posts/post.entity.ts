@@ -11,7 +11,7 @@ import {
   DeletedAt,
   BelongsTo,
 } from 'sequelize-typescript';
-import { User } from './../users/user.entity';
+import { User } from './../users';
 
 export class Post extends Model<Post> {
   @PrimaryKey
