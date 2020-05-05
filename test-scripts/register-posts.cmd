@@ -1,0 +1,3 @@
+curl -X POST "http://localhost:3000/users/register" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"email\":\"kashinathpai@gmail.com\",\"password\":\"test123\",\"firstName\":\"Kashinath\",\"lastName\":\"Pai\",\"gender\":\"male\",\"birthday\":\"00280501T000000-0800\"}"
+
+curl -X POST "http://localhost:3000/posts" -H "accept: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imthc2hpbmF0aHBhaUBnbWFpbC5jb20iLCJpYXQiOjE1ODg2ODA3NDl9.EgQ9onxh_hGp87QNfvDn2f3CYdNmNo86bPYLEsp3jyU" -H "Content-Type: application/json" -d "{\"title\":\"New Content\",\"content\":\"This is a new Post\"}"
