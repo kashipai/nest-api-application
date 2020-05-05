@@ -2,6 +2,7 @@ import { Sequelize } from 'sequelize-typescript';
 import { User } from './../users';
 import { Post } from './../posts';
 import { ConfigService } from './../shared';
+import { Todo } from './../todos';
 
 export const databaseProviders = [
   {

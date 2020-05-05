@@ -1,9 +1,9 @@
-import { Injectable, Inject, HttpException, HttpStatus } from '@nestjs/common';
+import { Injectable, Inject, HttpException, HttpStatus, forwardRef } from '@nestjs/common';
 import { User } from './user.entity';
 import { genSalt, hash, compare } from 'bcrypt';
-import { JwtPayload } from './auth/jwt-payload.model';
+import { JwtPayload } from './auth';
 import { sign } from 'jsonwebtoken';
-import { ConfigService } from './../shared/config/config.service';
+import { ConfigService } from './../shared';
 import {
   UserLoginResponseDto,
   CreateUserDto,
@@ -18,6 +18,7 @@ export class UsersService {
   constructor(
     @Inject('UsersRepository')
     private readonly usersRepository: typeof User,
+    @Inject(forwardRef(()=>ConfigService))
     private readonly configService: ConfigService,
   ) {
     this.jwtPrivateKey = this.configService.jwtConfig.privateKey;

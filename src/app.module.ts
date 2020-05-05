@@ -2,10 +2,11 @@ import { Module } from '@nestjs/common';
 import { UsersModule } from './users';
 import { SharedModule } from './shared';
 import { PostsModule } from './posts';
+import { TodosModule } from './todos';
 
-@Module({
-  imports: [UsersModule, PostsModule, SharedModule],
+@Module( {
+  imports: [ UsersModule, PostsModule, SharedModule ],
   controllers: [],
   providers: [],
-})
-export class AppModule {}
+} )
+export class AppModule { }
