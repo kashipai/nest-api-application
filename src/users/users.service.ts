@@ -1,4 +1,10 @@
-import { Injectable, Inject, HttpException, HttpStatus, forwardRef } from '@nestjs/common';
+import {
+  Injectable,
+  Inject,
+  HttpException,
+  HttpStatus,
+  forwardRef,
+} from '@nestjs/common';
 import { User } from './user.entity';
 import { genSalt, hash, compare } from 'bcrypt';
 import { JwtPayload } from './auth';
@@ -18,7 +24,7 @@ export class UsersService {
   constructor(
     @Inject('UsersRepository')
     private readonly usersRepository: typeof User,
-    @Inject(forwardRef(()=>ConfigService))
+    @Inject(forwardRef(() => ConfigService))
     private readonly configService: ConfigService,
   ) {
     this.jwtPrivateKey = this.configService.jwtConfig.privateKey;

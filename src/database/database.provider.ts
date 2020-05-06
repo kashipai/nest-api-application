@@ -11,7 +11,7 @@ export const databaseProviders = [
       const sequelize: Sequelize = new Sequelize(
         configService.sequelizeOrmConfig,
       );
-      sequelize.addModels([User, Post]);
+      sequelize.addModels([User, Post, Todo]);
       await sequelize.sync();
       return sequelize;
     },
